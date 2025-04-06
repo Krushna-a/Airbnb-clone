@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Listing</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="edit-container">
+      <div class="form-container">
+        <h3>Update Listing</h3>
+        <form action="/listing/<%= id %>/edit" method="POST">
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value="<%= data.title %>"
+          />
+
+          <label for="description">Description:</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            value="<%= data.description %>"
+          />
+
+          <label for="price">Price:</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            value="<%= data.price %>"
+          />
+
+          <label for="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            value="<%= data.location %>"
+          />
+
+          <label for="country">Country:</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            value="<%= data.country %>"
+          />
+
+          <label for="image">Image URL:</label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            value="<%= data.image %>"
+          />
+
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

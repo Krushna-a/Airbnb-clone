@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container ind_container">
+      <div class="card ind_card">
+        <div class="img">
+          <img src="<%= data.image.url %>" alt="image" />
+        </div>
+        <div class="info">
+          <div class="descr"><%= data.description %></div>
+          <div class="price"><%= data.price.toLocaleString("en-IN") %></div>
+          <div class="location"><%= data.location %></div>
+          <div class="country"><%= data.country %></div>
+        </div>
+        <div class="btns">
+          <form action="/listing/<%= data._id %>/edit" method="GET">
+            <button id="edit-btn">Edit</button>
+          </form>
+          <form action="/listing/<%= data._id %>/delete" method="POST">
+            <button id="del-btn">Delete</button>
+          </form>
+        </div>
+      </div>
+      <form action="/listing/<%= data._id %>/review" method="POST">
+        <div class="add-review">
+          <label for="rating">Rating</label>
+          <input type="number" id="rating" name="rating">
+
+          <label for="review">Review</label>
+          <textarea name="review" id="review"></textarea>
+
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

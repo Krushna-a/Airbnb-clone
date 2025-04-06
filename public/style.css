@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 120vh;
+  width: 100%;
+  position: relative;
+}
+
+/* header */
+
+.navbar {
+  height: 5rem;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+}
+.navbar div a {
+  text-decoration: none;
+  font-weight: 700;
+}
+.navbar div a:hover {
+  text-decoration: underline;
+}
+/* Footer  */
+.footer {
+  height: 5rem;
+  background-color: #696868;
+  color: white;
+  text-align: center;
+  padding-block: 10px;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.social-handles span {
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.social-handles span:hover {
+  text-decoration: underline;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* body */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-block-start: 100px;
+}
+
+.card-container a{
+    text-decoration: none;
+}
+/* Card */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Image */
+.card .img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card info */
+.card .info {
+  padding: 15px;
+}
+
+.card .descr {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card .location,
+.card .country {
+  font-size: 14px;
+  color: #666;
+}
+
+.ind_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ind_card{
+    width: 30rem;
+    height: 36rem;
+}
+
+.ind_card .img img{
+    height: 23rem;
+    width: 100%;
+    overflow-x: visible;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.btns form button,form{
+    width: 12rem;
+    height: 3rem;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: black;
+}
+#edit-btn{
+    background-color: aqua;
+}
+#del-btn{
+    background-color: rgb(245, 67, 67);
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.edit-container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Form Container */
+.form-container {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 530px;
+    position: relative;
+}
+
+/* Heading */
+h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    width: 300px;
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button */
+button {
+    width: 300px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
+/* General Styles */
+.body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+/* Form Container */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    text-align: center;
+     height: 690px; 
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+/* Form Title */
+.container h2 {
+    color: #333;
+}
+
+/* Form */
+.listing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Input Fields */
+.listing-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button */
+.listing-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.listing-form button:hover {
+    background-color: #0056b3;
+}
+
+/* review */
+
+.ind_container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.add-review{
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 1.7rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10rem;
+  transition: transform 0.3s ease-in-out;
+}
+.add-review:hover{
+  transform: translateY(-5px);
+}
+.add-review label{
+  font-size: 20px;
+}
+.add-review textarea{
+  height: 5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px;
+}
+.add-review button{
+  width: 100%;
+  color: black;
+}

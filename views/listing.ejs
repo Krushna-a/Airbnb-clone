@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('includes/header') %>
+    <div class="card-container">
+      <% allListings.forEach(listing => { %>
+      <a href="/listing/<%= listing._id %>">
+        <div class="card">
+          <div class="img">
+            <img src="<%= listing.image.url %>" alt="image" />
+          </div>
+          <div class="info">
+            <div class="descr"><%= listing.description %></div>
+            <div class="price">
+              <%= listing.price.toLocaleString("en-IN") %>
+            </div>
+            <div class="location"><%= listing.location %></div>
+            <div class="country"><%= listing.country %></div>
+          </div>
+        </div>
+      </a>
+      <% }); %>
+    </div>
+    <%- include('includes/footer') %>
+  </body>
+</html>
